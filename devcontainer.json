@@ -1,0 +1,23 @@
+{
+    "name": "Mi Workshop de Codespaces",
+    "image": "mcr.microsoft.com/devcontainers/universal:latest", // O una imagen más específica
+    "features": {
+      // Puedes añadir features como Node.js, Python, etc.
+    },
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-vscode.live-share",       // Para colaboración
+          "vsls-contrib.codetour",      // ¡Esencial para el "menú derecho" interactivo!
+          "yzhang.markdown-all-in-one"  // Para mejor visualización de Markdown
+          // Agrega otras extensiones relevantes para tu workshop
+        ],
+        "settings": {
+          // Configuraciones de VS Code para el Codespace
+          "editor.wordWrap": "on",
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        }
+      }
+    },
+    "postCreateCommand": "npm install" // Ejemplo: instalar dependencias de Node.js
+  }
